@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dist/app.js" defer></script>
+</head>
+<body>
+    <div class="first-page">
+        <div class="first-child">
+            <h1>Welcome to Best Brain Quiz</h1>
+
+            <div class="form">
+                <label for="username">Please type your name to continue</label>
+                <input type="text" id="username">
+            </div>
+
+            <button class="startbtn" onclick="start()">Start Quiz</button>
+        
+            <h2 class="prompt"></h2>
+        </div>
+
+        <div class="highscores">
+            <div>
+                <h1>Names</h1>
+                <ul class="names">
+                </ul>
+             </div>
+             
+            <div>
+                <h1>Scores</h1>
+                <ul class="scores">
+                </ul>
+             </div>
+
+            
+        </div>
+    </div>
+
+    <div class="quiz-app">
+        <div class="head">
+            <h1 class="displayUsername">Best Brain Quiz</h1>
+            <h2 class="time">Time : 30</h2>
+        </div>
+
+         <h2 class="question">1.What is the largest planet in the solar system?</h2>
+        
+         <div class="answers-col">
+            <button class="btn">Mars</button>
+            <button class="btn">Jupiter</button>
+            <button class="btn">Earth</button>
+            <button class="btn">Saturn</button>
+         </div>
+         <button class="next">Next</button>
+    </div>
+     
+</body>
+</html>

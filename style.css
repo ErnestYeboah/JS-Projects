@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.first-page{
+    position: fixed;
+    inset: .4rem;
+    background-color: hsl(216, 42%, 20%);
+    /* border: 2px outset green; */
+    padding: 1rem;
+    color: whitesmoke;
+    display: grid;
+    gap: 3rem;
+    z-index: 1;
+    transition: 500ms;
+
+    &.active{
+        translate: 0 -100%;
+    }
+
+    .first-child{
+        display: grid;
+        /* justify-items: start; */
+        align-items: start;
+    }
+
+    .highscores{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+
+        & h1{
+            text-align: left;     
+            line-height: .7;
+        }
+
+        .scores{
+            list-style-type: none;
+        }
+        
+        & ul{
+            padding: 1rem;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+        }
+        
+    }
+
+    label{
+        font-size: 1.2rem;
+        margin-right: 5px;
+    }
+
+    input{
+        padding: .5em;
+        font-size: 1.1rem;
+        border-radius: 1rem;
+        border: none;
+    }
+
+    .startbtn{
+        width: 35%;
+        margin-inline: auto;
+        padding: .5em .1em;
+    }
+}
+
+.quiz-app{
+    --text-clr : whitesmoke;
+    padding: 1em;
+    background-color: hsl(233, 71%, 7%);
+    color:  var(--text-clr);
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1{
+    text-align: center;
+    position: relative;
+   font-size: 3rem;
+
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        top: .6em;
+        width: 30px;
+        height: 2px;
+        background-color: var(--text-clr);
+    }
+
+    &::before{
+        translate: -3rem 0;
+    }
+    &::after{
+        translate: 1rem 0;
+    }
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.time{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.correct{
+    background-color: lightgreen;
+}
+
+.incorrect{
+    background-color: salmon;
+}
+
+button{
+    display: block;
+    border: none;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    padding: .5em .5em;
+
+    &:hover:not([disabled]){
+        background-color: var(--hover, rgb(175, 189, 201));
+    }
+
+}
+
+.btn{
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.next{
+    background-color: hsl(240, 78%, 45%);
+    margin: 1rem auto;
+    padding: .5em 1em;
+    color: var(--text-clr);
+    transition: 500ms;
+    --hover : blue;
+    &:hover{
+        /* background-color: hsl(240, 83%, 72%); */
+        scale: 1.1;
+        transition: 100ms;
+    }
+    &:active{
+        background-color: blue;
+    }
+}
